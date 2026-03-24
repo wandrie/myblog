@@ -1,0 +1,172 @@
+:root {
+    --primary-green: #064e3b;
+    --gold: #d4af37;
+    --light-gold: #f3e5ab;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(circle, #065f46 0%, #022c22 100%);
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: var(--white);
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.navbar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border: #b98686 solid 0.5px;
+    border-radius: 50%;
+}
+
+.judul {
+    font-size: 1.5rem;
+    color: var(--gold);
+    text-shadow: 1px 1px 3px rgba(108, 60, 60, 0.5);
+    margin-left: 15px;
+}
+
+span {
+    font-size: 1.5rem;
+    color: var(--white);
+    text-shadow: 1px 1px 3px rgba(108, 60, 60, 0.5);
+}
+
+.judul :hover {
+    color: var(--light-gold);
+    text-shadow: 2px 2px 5px rgba(108, 60, 60, 0.7);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--light-gold);
+    text-shadow: 1px 1px 3px rgba(108, 60, 60, 0.5);
+}
+
+.welcome-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    font-size: 1.2rem;
+    color: var(--white);
+    text-shadow: 1px 1px 3px rgba(108, 60, 60, 0.5);
+    margin-top: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    animation: pulse 2s infinite;
+}
+
+/* Animasi */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+    .logo {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    .nav-links {
+        flex-direction: column;
+        margin-left: 0;
+    }
+    .menu a {        margin: 10px 0;
+    }
+    .judul {
+        font-size: 1.2rem;
+    }
+    span {
+        font-size: 1.2rem;
+    }
+    .welcome-section { 
+        font-size: 1.2rem;
+        text-align: center;
+        position: relative;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar {
+        padding: 8px 15px;
+    }
+    .logo {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+    .nav-links {
+        flex-direction: column;
+        margin-left: 0;
+    }
+    .menu a {
+        margin: 10px 0;
+    }
+    .judul { font-size: 1rem; }
+    span { font-size: 1rem; }
+    .welcome-section { 
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 300px) {
+    .welcome-section { font-size: 1.2rem; }
+}
